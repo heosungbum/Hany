@@ -28,3 +28,15 @@ ncpp::doubleArr & ncpp::doubleArr::operator * (ncpp::doubleArr Iarr){
 
     return re;
 }
+
+void ncpp::doubleArr::print(){
+    int i;
+    cout << "[";
+    for(i=0; i<len; i++){
+        if(i!=0){
+            cout << ", ";
+        }
+        cout << arr[i];
+    }
+    cout << "]";
+}

@@ -4,7 +4,9 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-typedef double dType,*darrType;
+typedef double *darrType;
+typedef double **darr2dType;
+
 namespace ncpp{
     typedef class doubleArr{
         private:
@@ -19,4 +21,17 @@ namespace ncpp{
             inline int retlen(){return len;}
             void print();
     }darr;
+
+    typedef class doubleArr2d{
+        private:
+            int leny;
+        public:
+            darr * d;
+            doubleArr2d();
+            doubleArr2d(const int lengy, const int lengx);
+            void distroy();
+            inline darr * retArr(){return d;}
+            void print();
+            doubleArr2d & operator * (doubleArr2d Iarr);
+    }darr2d;
 }
